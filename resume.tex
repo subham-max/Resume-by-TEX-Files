@@ -1,0 +1,147 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontspec} % Required for adjusting fonts if needed
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% ---------- ATS Optimization ----------
+\pdftruetypeletters=1
+\pdfgentounicode=1
+
+% ---------- Page Setup ----------
+\pagestyle{empty}
+\thispagestyle{empty}
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% ---------- Custom Commands ----------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand{\subheadingitemsep}{\vspace{-4pt}}
+
+\newlist{resumeSubHeadingList}{itemize}{1}
+\setlist[resumeSubHeadingList]{leftmargin=0.15in, label={}}
+
+\newlist{resumeItemList}{itemize}{1}
+\setlist[resumeItemList]{leftmargin=0.25in, label=$\bullet$}
+
+% -----------------------------------------
+%                  RESUME
+% -----------------------------------------
+\begin{document}
+
+% ---------- HEADER ----------
+\begin{center}
+    {\Huge \scshape Subham Paul} \\ \vspace{5pt}
+    \small Kolkata, India $|$ \href{mailto:your.email@example.com}{your.email@example.com} $|$ 
+    \href{https://linkedin.com/in/yourprofile}{linkedin.com/in/yourprofile} $|$
+    \href{https://github.com/yourusername}{github.com/yourusername}
+\end{center}
+
+% ---------- SKILLS ----------
+\section{Technical Skills}
+ \begin{resumeSubHeadingList}
+    \item{
+     \textbf{Languages}: TypeScript, JavaScript, HTML5, CSS3, SQL, Dart \\
+     \textbf{Frameworks \& Libraries}: Angular, React, Next.js, Node.js, Flutter, OpenLayers \\
+     \textbf{Tools \& Runtimes}: Git, VS Code, Prisma, PostgreSQL, MongoDB \\
+    }
+ \end{resumeSubHeadingList}
+
+% ---------- EXPERIENCE ----------
+\section{Experience}
+  \begin{resumeSubHeadingList}
+
+    \resumeSubheading
+      {Mid-Level Frontend Developer}{May 2023 -- Present}
+      {Tech Startup / Company Name}{Kolkata, India}
+      \begin{resumeItemList}
+        \item Spearheaded frontend feature architecture optimization across multiple production web applications utilizing Angular and Next.js, ensuring high performance and responsive UI layouts.
+        \item Spearheaded a team of six developers to maintain and ship robust workflow automations for enterprise system platforms.
+        \item Integrated external hardware interfaces and dynamic localized e-signature endpoints (\texttt{https://localhost.emudhra.com}) for secure cryptographic validation modules.
+        \item Built reusable UI component libraries using TypeScript, slicing feature deployment cycles by leveraging modular design patterns.
+      \end{resumeItemList}
+
+    \resumeSubheading
+      {Frontend Developer}{Dec 2022 -- May 2023}
+      {Previous Company Name}{Kolkata, India}
+      \begin{resumeItemList}
+        \item Designed and deployed web applications utilizing React and state management workflows, maintaining precise styling frameworks alignment across application states.
+        \item Worked closely with backend teams linking REST APIs using Node.js, Prisma, and relational data repositories.
+      \end{resumeItemList}
+
+  \end{resumeSubHeadingList}
+
+% ---------- PROJECTS ----------
+\section{Key Projects}
+    \begin{resumeSubHeadingList}
+      
+      \resumeProjectHeading
+        {\textbf{Enterprise Hospital Management System (NTPC Saanjeevani)} $|$ \emph{Angular, CMS, Identity Verification}}{}
+        \begin{resumeItemList}
+          \item Developed the core modular web client structure for a massive, enterprise-grade hospital management dashboard ecosystem.
+          \item Configured explicit identity verification modules alongside structured CMS page layouts to streamline complex clinical data updates.
+        \end{resumeItemList}
+
+      \resumeProjectHeading
+        {\textbf{Arunachal Pradesh GIS Project} $|$ \emph{Angular, OpenLayers, Spatial Data Parsing}}{}
+        \begin{resumeItemList}
+          \item Implemented spatial metrics calculations, custom GIS boundaries rendering, and client-side performance tuning for geometric processing of heavy dynamic SHP spatial datasets.
+        \end{resumeItemList}
+        
+    \end{resumeSubHeadingList}
+
+% ---------- EDUCATION ----------
+\section{Education}
+  \begin{resumeSubHeadingList}
+    \resumeSubheading
+      {Vidyasagar University}{Graduated 2022}
+      {Master of Science (M.Sc.) in Computer Science}{West Bengal, India}
+    \resumeSubheading
+      {College/University Name}{Graduated 2017}
+      {Bachelor of Computer Applications (BCA)}{West Bengal, India}
+  \end{resumeSubHeadingList}
+
+\end{document}
