@@ -1,4 +1,8 @@
-\documentclass[letterpaper,11pt]{article}
+%-------------------------
+% Subham Paul - Resume
+% ATS-friendly single column LaTeX resume
+%-------------------------
+\documentclass[letterpaper,10.5pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -8,39 +12,42 @@
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-% \usepackage{fontspec} % Commented out to work with pdflatex\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
 \input{glyphtounicode}
 
-% ---------- ATS Optimization ----------
-\input{glyphtounicode}
-\pdfgentounicode=1
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% ---------- Page Setup ----------
-\pagestyle{empty}
-\thispagestyle{empty}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
 \urlstyle{same}
 
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.0in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% ---------- Custom Commands ----------
+% Ensure PDF is machine readable / ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item\small{#1 \vspace{-2pt}}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -58,89 +65,151 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\subheadingitemsep}{\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in]\itemsep -2pt}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-\newlist{resumeSubHeadingList}{itemize}{1}
-\setlist[resumeSubHeadingList]{leftmargin=0.15in, label={}}
-
-\newlist{resumeItemList}{itemize}{1}
-\setlist[resumeItemList]{leftmargin=0.25in, label=$\bullet$}
-
-% -----------------------------------------
-%                  RESUME
-% -----------------------------------------
+%-------------------------------------------
 \begin{document}
 
-% ---------- HEADER ----------
+%----------HEADING----------
 \begin{center}
-    {\Huge \scshape Subham Paul} \\ \vspace{5pt}
-    \small Kolkata, India $|$ \href{mailto:your.email@example.com}{your.email@example.com} $|$ 
-    \href{https://linkedin.com/in/yourprofile}{linkedin.com/in/yourprofile} $|$
-    \href{https://github.com/yourusername}{github.com/yourusername}
+    \textbf{\Huge \scshape Subham Paul} \\ \vspace{4pt}
+    \small
+    Kolkata, West Bengal, India $|$
+    \href{mailto:subhampaul011@gmail.com}{subhampaul011@gmail.com} $|$
+    (+91) 8768427379 $|$
+    \href{https://linkedin.com/in/subham-paul123}{linkedin.com/in/subham-paul123} $|$
+    \href{https://github.com/subham-max}{github.com/subham-max} $|$
+    \href{https://subham-max.netlify.app}{subham-max.netlify.app} \\
+    \vspace{2pt}
+    \textit{Immediate Joiner \, $|$ \, Open to Remote / Hybrid / Onsite roles across India}
 \end{center}
 
-% ---------- SKILLS ----------
+
+%-----------SUMMARY-----------
+\section{Professional Summary}
+\small{Frontend-focused full-stack developer with 5+ years of production experience across enterprise web applications (Angular v17, React, Next.js, TypeScript) and cross-platform mobile apps (Flutter -- Android \& iOS). Delivered production systems in rare, high-value domains: geospatial mapping (GIS/OpenLayers), biometric authentication (Aadhaar, Face Recognition), and secure payment gateway integrations (Razorpay, CcAvenue) for government, healthcare, and e-commerce clients at scale. Led and mentored a 6-member engineering team, achieving a 40\% team capacity increase and 95\%+ sprint completion rate. Two Flutter apps live on Google Play Store and Apple App Store. Actively expanding backend/DevOps depth (Node.js, Express, PostgreSQL, Redis, Docker, CI/CD, AWS).}
+
+
+%-----------SKILLS-----------
 \section{Technical Skills}
- \begin{resumeSubHeadingList}
-    \item{
-     \textbf{Languages}: TypeScript, JavaScript, HTML5, CSS3, SQL, Dart \\
-     \textbf{Frameworks \& Libraries}: Angular, React, Next.js, Node.js, Flutter, OpenLayers \\
-     \textbf{Tools \& Runtimes}: Git, VS Code, Prisma, PostgreSQL, MongoDB \\
-    }
- \end{resumeSubHeadingList}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:} TypeScript, JavaScript (ES6+), HTML5, CSS3/SCSS, SQL, Dart \\
+     \textbf{Frontend Frameworks:} Angular (v17), React.js, Next.js, RxJS, Vue.js, Tailwind CSS \\
+     \textbf{Mobile:} Flutter (Dart), Cross-Platform Android \& iOS, Android Studio, Xcode \\
+     \textbf{Backend \& Data:} Node.js, Express.js, PostgreSQL, Redis, MongoDB, Firebase, Drizzle ORM \\
+     \textbf{DevOps \& Cloud:} Docker, GitHub Actions, AWS (ECS, SAA-C03 in progress), CI/CD Pipelines \\
+     \textbf{Niche / Rare:} OpenLayers GIS, SHP/GeoJSON Rendering, Biometric APIs, Aadhaar Authentication, Face Recognition, OAuth2/JWT, SAP BTP Extensions \\
+     \textbf{Payments:} Razorpay, CcAvenue \\
+     \textbf{Testing:} Jest, Karma, Jasmine, Postman \\
+     \textbf{Tools:} Git, Jira, Agile/Scrum, VS Code, Vercel, Hostinger, IIS, Microsoft Teams
+    }}
+ \end{itemize}
 
-% ---------- EXPERIENCE ----------
+
+%-----------EXPERIENCE-----------
 \section{Experience}
-  \begin{resumeSubHeadingList}
+  \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Mid-Level Frontend Developer}{May 2023 -- Present}
-      {Tech Startup / Company Name}{Kolkata, India}
-      \begin{resumeItemList}
-        \item Spearheaded frontend feature architecture optimization across multiple production web applications utilizing Angular and Next.js, ensuring high performance and responsive UI layouts.
-        \item Spearheaded a team of six developers to maintain and ship robust workflow automations for enterprise system platforms.
-        \item Integrated external hardware interfaces and dynamic localized e-signature endpoints (\texttt{https://localhost.emudhra.com}) for secure cryptographic validation modules.
-        \item Built reusable UI component libraries using TypeScript, slicing feature deployment cycles by leveraging modular design patterns.
-      \end{resumeItemList}
+      {Maxbridge Solution LLP}{Kolkata, India}
+      {Frontend Developer (SD-2) \textit{--- Promoted from Application Developer, May 2025}}{March 2023 -- 2025}
+      \resumeItemListStart
+        \resumeItem{Coordinated and mentored a 6-member engineering squad for the RCS Enterprise Suite; led recruitment drives and technical interviews, scaling team capacity by 40\% while maintaining 95\%+ sprint completion rates.}
+        \resumeItem{Architected scalable Angular (v17) / React / Next.js / TypeScript systems for government-grade enterprise applications serving 10,000+ users across multiple state government clients.}
+        \resumeItem{Engineered and deployed cross-platform Flutter mobile applications (Android + iOS); integrated Razorpay and CcAvenue payment gateways with full store deployment.}
+        \resumeItem{Built production-grade OpenLayers + Angular GIS modules parsing SHP files and GeoJSON for state government spatial data infrastructure planning -- a skill held by fewer than 2\% of Indian developers in production.}
+        \resumeItem{Integrated biometric hardware, Aadhaar-based authentication (India's national biometric identity system), and Face Recognition APIs within Angular, supporting 1,000+ daily secure employee authentications for NTPC/NSPCL (Government of India enterprises).}
+        \resumeItem{Reduced Time-to-Interactive and First Contentful Paint by \textasciitilde35\% using OnPush Change Detection, lazy-loading, AOT compilation, and custom RxJS state operators.}
+        \resumeItem{Established reusable SCSS component libraries across 5+ client projects, cutting UI development time by \textasciitilde25\%.}
+      \resumeItemListEnd
 
     \resumeSubheading
-      {Frontend Developer}{Dec 2022 -- May 2023}
-      {Previous Company Name}{Kolkata, India}
-      \begin{resumeItemList}
-        \item Designed and deployed web applications utilizing React and state management workflows, maintaining precise styling frameworks alignment across application states.
-        \item Worked closely with backend teams linking REST APIs using Node.js, Prisma, and relational data repositories.
-      \end{resumeItemList}
+      {Rolling Arrays}{Mumbai, India}
+      {Associate Consultant}{July 2022 -- December 2022}
+      \resumeItemListStart
+        \resumeItem{Developed custom UI enhancements within SAP SuccessFactors for enterprise HR clients, ensuring alignment with client workflows and branding guidelines.}
+        \resumeItem{Architected and deployed custom frontend modules via SAP BTP Extension Center, extending core Recruiting and Onboarding functionality for enterprise clients.}
+        \resumeItem{Engineered data-binding logic using SAP OData APIs for real-time synchronization between custom extensions and the SuccessFactors core database.}
+      \resumeItemListEnd
 
-  \end{resumeSubHeadingList}
+    \resumeSubheading
+      {Ayant Software Pvt Ltd}{Kolkata, India}
+      {Team Leader \textit{--- Promoted from Associate}}{January 2018 -- February 2020}
+      \resumeItemListStart
+        \resumeItem{Designed and administered technical screening assessments for frontend and full-stack developer candidates, evaluating proficiency across JavaScript, Angular, React, and web development fundamentals.}
+        \resumeItem{Developed structured coding challenge frameworks and competency rubrics with senior engineers, standardizing the technical evaluation process and improving quality-of-hire consistency.}
+        \resumeItem{Led end-to-end developer recruitment -- sourcing, screening, and interviewing -- and onboarded high-performing engineers into structured training programs, reducing time-to-productivity through clear onboarding documentation.}
+        \resumeItem{Partnered with technical leads and project managers to define evolving skill requirements aligned with software delivery needs.}
+      \resumeItemListEnd
 
-% ---------- PROJECTS ----------
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
 \section{Key Projects}
-    \begin{resumeSubHeadingList}
-      
-      \resumeProjectHeading
-        {\textbf{Enterprise Hospital Management System (NTPC Saanjeevani)} $|$ \emph{Angular, CMS, Identity Verification}}{}
-        \begin{resumeItemList}
-          \item Developed the core modular web client structure for a massive, enterprise-grade hospital management dashboard ecosystem.
-          \item Configured explicit identity verification modules alongside structured CMS page layouts to streamline complex clinical data updates.
-        \end{resumeItemList}
+    \resumeSubHeadingListStart
 
-      \resumeProjectHeading
-        {\textbf{Arunachal Pradesh GIS Project} $|$ \emph{Angular, OpenLayers, Spatial Data Parsing}}{}
-        \begin{resumeItemList}
-          \item Implemented spatial metrics calculations, custom GIS boundaries rendering, and client-side performance tuning for geometric processing of heavy dynamic SHP spatial datasets.
-        \end{resumeItemList}
-        
-    \end{resumeSubHeadingList}
+      \item
+        \textbf{RCS Enterprise Suite} $|$ Office \& Co-operative Management System \hfill \href{https://its4rcs.com/}{its4rcs.com} \\
+        \textit{\small Next.js, React, TypeScript, RxJS, Dynamic Forms, PDF Engine}
+        \resumeItemListStart
+          \resumeItem{High-security management platform for the Head of Co-operatives, built as Lead Developer of a 6-person team: custom email workflows, multi-stage approval system, and RBAC -- reduced manual processing by \textasciitilde40\%.}
+        \resumeItemListEnd
 
-% ---------- EDUCATION ----------
+      \item
+        \textbf{NTPC Sanjeevani + NSPCL Niramaya} $|$ Hospital Management System \\
+        \textit{\small Angular, Custom CMS, Biometric APIs, Aadhaar Authentication, Face Recognition}
+        \resumeItemListStart
+          \resumeItem{Full HMS with custom CMS and Biometric + Aadhaar + Face Recognition authentication, supporting 1,000+ daily authentications for Government of India enterprises. Live at sanjeevaninew.ntpc.co.in and niramaya.nspcl.co.in.}
+        \resumeItemListEnd
+
+      \item
+        \textbf{Arunachal Pradesh GIS Portal} $|$ Geospatial Data Analysis \hfill \href{https://apcis.in/}{apcis.in} \\
+        \textit{\small Angular, OpenLayers, GeoJSON, SHP File Rendering}
+        \resumeItemListStart
+          \resumeItem{SHP and GeoJSON parsing with interactive multi-layer visualization for government infrastructure planning -- a rare production GIS skill set.}
+        \resumeItemListEnd
+
+      \item
+        \textbf{PHED App} $|$ Water Services Utility \hfill \textit{\small Play Store \& App Store} \\
+        \textit{\small Flutter (Dart), Razorpay, CcAvenue, Cross-Platform}
+        \resumeItemListStart
+          \resumeItem{Dynamic form-driven mobile app with integrated secure payment gateways (Razorpay + CcAvenue), deployed live on both Android and iOS stores.}
+        \resumeItemListEnd
+
+      \item
+        \textbf{Get All Book} $|$ E-Commerce Mobile Platform \hfill \textit{\small Play Store} \\
+        \textit{\small Flutter (Dart), Firebase, State Management, Real-time Tracking}
+        \resumeItemListStart
+          \resumeItem{Full-scale e-commerce app with cart, wishlist, and real-time order tracking, live on Google Play Store.}
+        \resumeItemListEnd
+
+      \item
+        \textbf{ApplyTrack} $|$ Full-Stack Portfolio Project \hfill \textit{\small In Progress} \\
+        \textit{\small Next.js 15, Node.js/Express, Drizzle ORM, Neon Postgres, Upstash Redis, Docker, GitHub Actions, AWS ECS}
+        \resumeItemListStart
+          \resumeItem{Self-initiated full-stack application demonstrating backend and DevOps proficiency end-to-end: containerized services, automated CI/CD pipelines, and cloud deployment on AWS ECS.}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
 \section{Education}
-  \begin{resumeSubHeadingList}
+  \resumeSubHeadingListStart
     \resumeSubheading
-      {Vidyasagar University}{Graduated 2022}
-      {Master of Science (M.Sc.) in Computer Science}{West Bengal, India}
+      {St. Xavier's College, Park Street}{Kolkata, India}
+      {Master of Science (M.Sc.) in Computer Science \textit{--- CGPA: 8.1/10}}{June 2020 -- August 2022}
+      \resumeItemListStart
+        \resumeItem{Best Project Award: COVID-19 Pandemic Prediction using Machine Learning.}
+      \resumeItemListEnd
     \resumeSubheading
-      {College/University Name}{Graduated 2017}
-      {Bachelor of Computer Applications (BCA)}{West Bengal, India}
-  \end{resumeSubHeadingList}
+      {Maulana Abu Kalam Azad University of Technology}{Kolkata, India}
+      {Bachelor of Computer Applications (BCA)}{May 2014 -- July 2017}
+  \resumeSubHeadingListEnd
 
 \end{document}
